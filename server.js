@@ -1,11 +1,21 @@
 const http = require('http');
-const { getProducts } = require('./controllers/productController');
+const { getProducts, getProduct } = require('./controllers/productController');
 
 const server = http.createServer((req, res) => {
   if (req.url === '/api/products' && req.method === 'GET') {
     getProducts(req, res);
+  } else if (
+    req.url.match(/\/api\/products\/([0-9]+)/) &&
+    req.method === 'GET'
+  ) {
+    const id = req.url.split('/')[3];
+
+    // Check what kind of array "id" is.
+    // console.log(id);
+
+    getProduct(req, res, id);
   } else {
-    res.writeHead(404, 'text/plain');
+    res.writeHead(404, { 'Content-Type': 'text/html' });
     res.end('<h1>404 PAGE NOT FOUND</h1>');
   }
 });
@@ -13,3 +23,8 @@ const server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+
+// new functions:
+// String function: match(): uses regex to find match.
+
+// find(): array method to search for particular element.
