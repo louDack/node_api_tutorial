@@ -1,9 +1,9 @@
 [
   {
-    "id": "1",
-    "name": "Airpods Wireless Bluetooth Headphones",
+    "name": "Gigachad",
     "description": "Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working",
-    "price": 89.99
+    "price": "401.25",
+    "id": "1"
   },
   {
     "id": "2",
@@ -42,9 +42,9 @@
     "id": "de52acbe-dc9b-4394-9534-86e7b577496e"
   },
   {
-    "title": "Crow say hi",
-    "description": "caw caw",
-    "price": "15.99",
+    "title": "Crow say hi back",
+    "description": "falco punch",
+    "price": ".111",
     "id": "a228badb-a8dd-4c11-9958-ba11c98e41ed"
   }
 ]
